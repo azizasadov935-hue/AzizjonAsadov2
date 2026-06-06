@@ -1,1 +1,386 @@
+/* ====================================
+   ROTATING RINGS
+==================================== */
 
+.ring-1{
+
+animation:
+rotateClockwise 18s linear infinite;
+
+}
+
+.ring-2{
+
+animation:
+rotateCounter 24s linear infinite;
+
+}
+
+.ring-3{
+
+animation:
+rotateClockwise 30s linear infinite;
+
+}
+
+@keyframes rotateClockwise{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+@keyframes rotateCounter{
+
+from{
+
+transform:rotate(360deg);
+
+}
+
+to{
+
+transform:rotate(0deg);
+
+}
+
+}
+
+/* ====================================
+   FLOATING TAGS
+==================================== */
+
+.floating-tag{
+
+animation:
+floatingTag 4s ease-in-out infinite;
+
+}
+
+.floating-tag.second{
+
+animation-delay:1s;
+
+}
+
+.floating-tag.third{
+
+animation-delay:2s;
+
+}
+
+@keyframes floatingTag{
+
+0%{
+
+transform:
+translateY(0);
+
+}
+
+50%{
+
+transform:
+translateY(-12px);
+
+}
+
+100%{
+
+transform:
+translateY(0);
+
+}
+
+}
+
+/* ====================================
+   AVATAR FLOAT
+==================================== */
+
+.avatar-area img{
+
+animation:
+avatarFloat 6s ease-in-out infinite;
+
+}
+
+@keyframes avatarFloat{
+
+0%{
+
+transform:
+translateY(0);
+
+}
+
+50%{
+
+transform:
+translateY(-10px);
+
+}
+
+100%{
+
+transform:
+translateY(0);
+
+}
+
+}
+
+/* ====================================
+   HERO BADGE
+==================================== */
+
+.hero-badge{
+
+animation:
+badgeGlow 3s ease infinite;
+
+}
+
+@keyframes badgeGlow{
+
+0%{
+
+box-shadow:
+0 0 0 rgba(124,58,237,0);
+
+}
+
+50%{
+
+box-shadow:
+0 0 25px rgba(124,58,237,.4);
+
+}
+
+100%{
+
+box-shadow:
+0 0 0 rgba(124,58,237,0);
+
+}
+
+}
+
+/* ====================================
+   REVEAL
+==================================== */
+
+.reveal{
+
+opacity:0;
+
+transform:
+translateY(50px);
+
+transition:
+all .8s ease;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+/* ====================================
+   PROJECT CARD HOVER
+==================================== */
+
+.project-card{
+
+transition:
+transform .4s ease,
+border-color .4s ease,
+box-shadow .4s ease;
+
+}
+
+.project-card:hover{
+
+box-shadow:
+0 25px 50px rgba(124,58,237,.15);
+
+}
+
+/* ====================================
+   SOCIAL CARD
+==================================== */
+
+.social-card i{
+
+transition:
+transform .4s ease;
+
+}
+
+.social-card:hover i{
+
+transform:
+scale(1.15)
+rotate(8deg);
+
+}
+
+/* ====================================
+   SKILL CARD
+==================================== */
+
+.skill-card i{
+
+transition:
+transform .4s ease;
+
+}
+
+.skill-card:hover i{
+
+transform:
+scale(1.2);
+
+}
+
+/* ====================================
+   ACHIEVEMENT
+==================================== */
+
+.achievement-card h3{
+
+animation:
+numberGlow 4s ease infinite;
+
+}
+
+@keyframes numberGlow{
+
+0%{
+
+filter:
+drop-shadow(0 0 0px transparent);
+
+}
+
+50%{
+
+filter:
+drop-shadow(
+0 0 18px
+rgba(124,58,237,.6)
+);
+
+}
+
+100%{
+
+filter:
+drop-shadow(0 0 0px transparent);
+
+}
+
+}
+
+/* ====================================
+   LOADER
+==================================== */
+
+.loader-line{
+
+animation:
+loaderRun 1.2s linear infinite;
+
+}
+
+@keyframes loaderRun{
+
+0%{
+
+transform:
+scaleX(.2);
+
+opacity:.4;
+
+}
+
+50%{
+
+transform:
+scaleX(1);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+scaleX(.2);
+
+opacity:.4;
+
+}
+
+}
+
+/* ====================================
+   BUTTON HOVER
+==================================== */
+
+.primary-btn,
+.secondary-btn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.primary-btn::before,
+.secondary-btn::before{
+
+content:'';
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:120%;
+
+height:100%;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.2),
+transparent
+);
+
+transition:.6s;
+
+}
+
+.primary-btn:hover::before,
+.secondary-btn:hover::before{
+
+left:120%;
+
+}
